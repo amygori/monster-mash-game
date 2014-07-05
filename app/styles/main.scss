@@ -3,13 +3,16 @@
 * { @include box-sizing(border-box); }
 
 #start {
+	width: 600px;
+	height: 600px;
 	background-color: #FD6A6E;
+	float: left;
 }
 
-#nunFight {
+#fight1 {
 	background-color: #FFBE6B;
 }
 
-#priestFight {
+#fight2 {
 	background-color: #BC53C3;
 }

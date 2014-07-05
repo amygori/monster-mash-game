@@ -1,3 +1,12 @@
+//Hide the divs as needed
+$(#fight1).hide();
+$("#fight2").hide();
+
+$( "#start" ).click(function( event ) {
+  $( this ).hide();
+  $("#fight1").show();
+});
+
 // CONSTRUCTORS
 // Here is where you'll create your constructors for you player and monster.
 
@@ -9,7 +18,7 @@ function Monster(health, name) {
 		console.log('WHACK!');
 		this.life--;
 		if(this.life = 0){
-			alert ('You defeated the monster!');
+			alert ('Victory is yours!');
 			$(#start).show();
 		};//some code here that will alert win and return to beginning
 }
@@ -22,21 +31,29 @@ function Player (name) {
 
 // GLOBAL VARIABLES
 // You'll also want to create variables for the specific players and monsters.
-var nun = new Player({
-	name: 'Nun'
+var blackKitteh = new Player({
+	name: 'Black Kitteh';
+	var img = new Image(); 
+	img.src = 'blackKitteh.png';
 });
 
-var priest = new Player({
-	name: 'Priest'
+var gatlingKitteh = new Player({
+	name: 'Gatling Kitteh';
+	var img = new Image(); 
+	img.src = 'gatlingKitteh.jpg';
 });
 
 var blob = new Monster({
 	name: 'The Blob';
+	var img = new Image(); 
+	img.src = 'blob.png';
 
 });
 
-var Mothra = new Monster({
-
+var Alien = new Monster({
+	name: 'The Alien';
+	var img = new Image(); 
+	img.src = 'alien.png';
 });
 
 // e.g. var purplePeopleEater = new Monster();
@@ -50,10 +67,7 @@ var Mothra = new Monster({
 // interactions for players and monsters. (e.g. player selection, attack interactions)
 // e.g. $('.purple-people-eater').click(function () { Some code that attacks the monster! };
 
-//Hide the divs as needed
-/*$( "#start" ).click(function( event ) {
-  $( this ).hide();
-});*/
+
  
 
 
@@ -61,21 +75,6 @@ var Mothra = new Monster({
 /*var source   = $("#select").html();
 var template = Handlebars.compile(source);*/
 
-var attackMode = function(whack){
-	while(Monster.health>0){
-		
-		return Monster.health;
-		alert('The Monster is dead!');
-	}
-}
 
+//
 	
-
-		attackMode.call
-
-	})
-//}
-		
-
-
-
