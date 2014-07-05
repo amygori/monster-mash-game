@@ -1,7 +1,6 @@
 //Hide the divs as needed
-$(#fight1).hide();
-$("#fight2").hide();
-
+$("fight1").hide();
+$("fight2").hide();
 $( "#start" ).click(function( event ) {
   $( this ).hide();
   $("#fight1").show();
@@ -18,13 +17,13 @@ function Monster(health, name) {
 		console.log('WHACK!');
 		this.life--;
 		if(this.life = 0){
-			alert ('Victory is yours!');
-			$(#start).show();
+			alert ('Success! Victory is yours!');
+			$("#start").show();
 		};//some code here that will alert win and return to beginning
 }
 
 // Player constructor
-function Player (name) {
+function Player(name) {
 	this.name = name;
 }
 
