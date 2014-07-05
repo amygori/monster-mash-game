@@ -1,3 +1,15 @@
 @import "../bower_components/bourbon/dist/bourbon";
 
 * { @include box-sizing(border-box); }
+
+#start {
+	background-color: #FD6A6E;
+}
+
+#nunFight {
+	background-color: #FFBE6B;
+}
+
+#priestFight {
+	background-color: #BC53C3;
+}

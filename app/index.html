@@ -29,8 +29,25 @@
         <!-- THIS IS JUST SOME EXAMPLE CODE TO RELATE BACK TO OUR MAIN.JS FILE. 
         YOU'LL NEED TO START YOUR GAME WITH THE ABILITY TO SELECT BETWEEN PLAYERS.-->
             <div class="container">
-                <div class="monster"><a href="#">Monster</a></div>
-                <div class="player"><a href="#">Player</a></div>
+                <div id="start"><!-- Here is the start screen: need template here-->
+                    <script id="select" type="text/x-handlebars-template"></script>
+                    <div class="player">
+                    <p>select your player!</p>
+                    <p>{{nun}}</p>
+
+                    <img src="#"></div>
+               
+
+                <div id ="nunFight"><!-- Here is the fight screen-->
+                    <div class="monster"><img src="#">Monster</img> </div>
+                    <div class="player"><img src="#">Player</img></div>
+                </div>
+
+                <div id ="priestFight"><!-- Here is the fight screen-->
+                    <div class="monster"><img src="#">Monster</img> </div>
+                    <div class="player"><img src="#">Player</img></div>
+                </div>
+                    
             </div>
         </div> 
 
@@ -38,6 +55,7 @@
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/handlebars/handlebars.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 

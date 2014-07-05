@@ -2,30 +2,36 @@
 // Here is where you'll create your constructors for you player and monster.
 
 // Monster constructor
-function Monster(options) {
-	options:options || {};
-	this.health =  0;
-	this.name = options.name;
+function Monster(health, name) {
+	this.life = 20;
+	this.name = name;
+	this.whack = $('.monster').click(function (whack){
+		console.log('WHACK!');
+		this.life--;
+		if(this.life = 0){
+			alert ('You defeated the monster!');
+			$(#start).show();
+		};//some code here that will alert win and return to beginning
 }
 
 // Player constructor
-function Player (options) {
-	options:options || {};
-	this.name = options.name;
+function Player (name) {
+	this.name = name;
 }
 
 
 // GLOBAL VARIABLES
 // You'll also want to create variables for the specific players and monsters.
 var nun = new Player({
-
-	});
-
-var priest = new Player({
-
+	name: 'Nun'
 });
 
-var Godzilla = new Monster({
+var priest = new Player({
+	name: 'Priest'
+});
+
+var blob = new Monster({
+	name: 'The Blob';
 
 });
 
@@ -43,18 +49,33 @@ var Mothra = new Monster({
 // This is where jQuery will come into play and where you'll set a lot of your
 // interactions for players and monsters. (e.g. player selection, attack interactions)
 // e.g. $('.purple-people-eater').click(function () { Some code that attacks the monster! };
-var attackMode = function(Monster){ 
-	$('.monster a').click(function (e){
-		e.preventDefault();
-		console.log('WHACK!');
-		if Monster.health<===20 {
-			return Monster.health+5;
-		}
-		else {
-			alert ("You won!");
-			window.prompt ("Play again?");
-		}
-	});
-};
+
+//Hide the divs as needed
+/*$( "#start" ).click(function( event ) {
+  $( this ).hide();
+});*/
+ 
+
+
+//compile handlebars template
+/*var source   = $("#select").html();
+var template = Handlebars.compile(source);*/
+
+var attackMode = function(whack){
+	while(Monster.health>0){
+		
+		return Monster.health;
+		alert('The Monster is dead!');
+	}
+}
+
+	
+
+		attackMode.call
+
+	})
+//}
+		
+
 
 
