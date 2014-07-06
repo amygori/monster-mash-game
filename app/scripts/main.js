@@ -2,11 +2,8 @@
 $("#fight").hide();
 $( "#start" ).click(function(event) {
   $("#start").hide();
-  $("#fight").show();
+  $("#fight").toggle();
 });
-
-// CONSTRUCTORS
-
 
 // Monster constructor
 function Monster(life, name) {
@@ -48,13 +45,6 @@ blob.img.src = 'images/blob.png';
 var alien = new Monster(50, 'The Alien');
 alien.img = new Image('images/alien.png');
 alien.img.src = 'images/alien.png';
-
-
-// ACTIONS
-// This is where jQuery will come into play and where you'll set a lot of your
-// interactions for players and monsters. (e.g. player selection, attack interactions)
-// e.g. $('.purple-people-eater').click(function () { Some code that attacks the monster! };
- 
 
 //compile handlebars template
 var players = {players: [blackKitteh, gatlingKitteh]};
