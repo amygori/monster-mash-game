@@ -2,7 +2,7 @@
 $("#fight").hide();
 $( "#start" ).click(function(event) {
   $("#start").hide();
-  
+  $("#fight").show();
 });
 
 // CONSTRUCTORS
@@ -42,7 +42,7 @@ $(gatlingKitteh).click(function (){
 })	
 
 var blob = new Monster(25,'The Blob');
-blob.img = new Image('images/blob.png');
+blob.img = new Image();
 blob.img.src = 'images/blob.png';
 
 var alien = new Monster(50, 'The Alien');
@@ -57,9 +57,11 @@ alien.img.src = 'images/alien.png';
  
 
 //compile handlebars template
-/*var source   = $("#select").html();
-var template = Handlebars.compile(source);*/
+var players = [blackKitteh, gatlingKitteh];
+
+var source   = $("#select").html();
+var template = Handlebars.compile(source);
+$('#start').append (template (players));
 
 
-//
 	

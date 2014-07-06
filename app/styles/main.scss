@@ -1,11 +1,23 @@
 @import "../bower_components/bourbon/dist/bourbon";
+@import url(http://fonts.googleapis.com/css?family=Orbitron:400,700);
 
 * { @include box-sizing(border-box); }
+$font: "Orbitron", sans-serif;
+
+body {
+	font-family: $font;
+	font-size: 2em;
+}
 
 #start {
 	width: 600px;
 	height: 600px;
 	background-color: #FD6A6E;
+	margin: 0;
+	border: 5px solid #BC53C3;
+	p {
+		padding: 60px;
+	}
 }
 
 #fight1 {

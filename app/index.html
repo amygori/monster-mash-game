@@ -29,22 +29,23 @@
         <!-- THIS IS JUST SOME EXAMPLE CODE TO RELATE BACK TO OUR MAIN.JS FILE. 
         YOU'LL NEED TO START YOUR GAME WITH THE ABILITY TO SELECT BETWEEN PLAYERS.-->
             <div class="container">
-                <div id="start"><!-- Here is the start screen: need template here-->
-                    <script id="select" type="text/x-handlebars-template">
-                    <div class="player">
-                    
-                    <p>Select your player!</p>
-                    <img src="images/blackKitteh.png">
-                    <img src="images/gatlingKitteh.jpg">
-                    
+                <div id="start"><!-- Here is the start screen-->
+                    <script id="select" type="text/x-handlebars-template">  
+                        <p>Choose your player!</p>
+                        {{blackKitteh}}
+                        {{gatlingKitteh}}    
                     </script>
                     </div>
                
 
                 <div id ="fight"><!-- Here is the fight screen-->
-                    <div class="monster"><img src="#">Monster</img> </div>
-
-                    <div class="player"><img src="#">Player</img></div>
+                   <script id="doBattle" type="text/x-handlebars-template">
+                    
+                    <p>FIGHT! FIGHT! FIGHT!</p>
+                    {{Player}}
+                    {{Monster}}
+                    </script>
+                    
                 </div>
 
                 
