@@ -57,11 +57,15 @@ alien.img.src = 'images/alien.png';
  
 
 //compile handlebars template
-var players = [blackKitteh, gatlingKitteh];
+var players = {players: [blackKitteh, gatlingKitteh]};
 
-var source   = $("#select").html();
-var template = Handlebars.compile(source);
-$('#start').append (template (players));
+var pSource   = $("#select").html();
+var pTemplate = Handlebars.compile(pSource);
+$('#start').append (pTemplate (players));
 
+var monsters = {monsters: [blob, alien]};
+var mSource   = $("#fight").html();
+var mTemplate = Handlebars.compile(mSource);
+$('#fight').append (mTemplate (monsters));
 
 	
