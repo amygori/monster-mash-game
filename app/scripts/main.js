@@ -48,7 +48,6 @@ alien.img.src = 'images/alien.png';
 
 //compile handlebars template
 var players = {players: [blackKitteh, gatlingKitteh]};
-
 var pSource   = $("#select").html();
 var pTemplate = Handlebars.compile(pSource);
 $('#start').append (pTemplate (players));
