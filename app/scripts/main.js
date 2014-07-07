@@ -43,7 +43,7 @@ blob.img = new Image();
 blob.img.src = 'images/blob.png';
 
 var alien = new Monster(50, 'The Alien');
-alien.img = new Image('images/alien.png');
+alien.img = new Image();
 alien.img.src = 'images/alien.png';
 
 //compile handlebars template
@@ -53,9 +53,9 @@ var pSource   = $("#select").html();
 var pTemplate = Handlebars.compile(pSource);
 $('#start').append (pTemplate (players));
 
-var monsters = {monsters: [blob, alien]};
-var mSource   = $("#fight").html();
+var fighters = [{monsters: [blob, alien]}, players];
+var mSource   = $("#doBattle").html();
 var mTemplate = Handlebars.compile(mSource);
-$('#fight').append (mTemplate (monsters));
+$('#fight').append (mTemplate (fighters));
 
 	

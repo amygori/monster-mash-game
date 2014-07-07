@@ -14,13 +14,14 @@ body {
 	height: 600px;
 	background-color: #FD6A6E;
 	margin: 0;
-	border: 5px solid #BC53C3;
+	border: 5px ridge #BC53C3;
 	p {
 		padding: 60px;
 	}
 }
 
 #fight {
+	@extend #start;
 	background-color: #FFBE6B;
 }
 
