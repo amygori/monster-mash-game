@@ -45,6 +45,12 @@ $(blob).attr('src', 'images/blob.png');
 var alien = new Monster(50, 'The Alien');
 $(alien).attr('src', 'images/alien.png');
 
+function {
+		//show two players to choose from
+}
+
+
+
 //compile handlebars template
 /*var players = {players: [blackKitteh, gatlingKitteh]};
 var pSource   = $("#select").html();

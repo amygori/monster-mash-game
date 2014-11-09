@@ -2,18 +2,21 @@
 // generated on 2014-07-01 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
+var sass = require('gulp-ruby-sass');
+var plumber = require('gulp-plumber');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
     return gulp.src('app/styles/main.scss')
+        .pipe(plumber())
         .pipe($.rubySass({
             style: 'expanded',
             precision: 10
         }))
         .pipe($.autoprefixer('last 1 version'))
-        .pipe(gulp.dest('.tmp/styles'))
+        .pipe(gulp.dest('app/styles'))
         .pipe($.size());
 });
 
@@ -29,6 +32,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
     var cssFilter = $.filter('**/*.css');
 
     return gulp.src('app/*.html')
+        .pipe(plumber())
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(jsFilter)
         .pipe($.uglify())
@@ -131,3 +135,5 @@ gulp.task('watch', ['connect', 'serve'], function () {
     gulp.watch('app/images/**/*', ['images']);
     gulp.watch('bower.json', ['wiredep']);
 });
+
+
