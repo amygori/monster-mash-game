@@ -14,19 +14,22 @@ function Monster(life, name) {
 }
 
 // Player constructor
-function Player(image, name) {
+function Player(name) {
 	this.name = name;
 }
 
-//attack
-var $whack = $('.monster').click(function (whack){
+//attack: this just subtracts life from a monster
+var $whack = $('.monster').click(function(){
 		console.log('WHACK!');
 		this.life--;
 		if(this.life === 0){
+			window.alert("You've defeated the monster!");
 			$("#start").show();
 		}
 	});
-		//some code here that will alert win and return to beginning
+//some code here that will alert win and return to beginning
+
+
 // GLOBAL VARIABLES
 
 var blackKitteh = new Player('Black Kitteh');
@@ -45,9 +48,12 @@ $(blob).attr('src', 'images/blob.png');
 var alien = new Monster(50, 'The Alien');
 $(alien).attr('src', 'images/alien.png');
 
-function {
+var players = [blackKitteh, gatlingKitteh];
+var monsters = [blob, alien];
+
+//function {
 		//show two players to choose from
-}
+//}
 
 
 

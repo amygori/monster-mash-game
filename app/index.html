@@ -30,7 +30,11 @@
                 <p>Choose your player!</p>
                     <script id="select" type="text/x-handlebars-template">  
                         <div class="player">
-                            _.each(players);
+                            <ul>
+                                {{#players}}
+                                    <li>{{name}}</li>
+                                {{/players}}
+                            </ul>
                             console.log(players);
                         </div>
                            
